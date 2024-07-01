@@ -89,16 +89,16 @@ const Form = () => {
             required
           />
         </div>
-        <button type="submit" className="button button-block">Get Started</button>
+        <button type="submit" className="button button-block">Submit Form</button>
       </form>
       <Link
         to={{
           pathname: '/submitted',
           state: formData,
         }}
-        className="button button-block"
+        className="buttonview"
       >
-        Check Submitted Data
+        View Submitted Data
       </Link>
     </div>
   );
