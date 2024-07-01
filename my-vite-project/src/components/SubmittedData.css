@@ -10,6 +10,30 @@
     flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
     justify-content: center; /* Centers cards horizontally */
   }
+.headingss{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+  .back {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .back a {
+    text-decoration: none;
+    color: rgb(243, 200, 7);
+    background-color: #272829; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    display: inline-block;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .back a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
   
   .submitted-data h1 {
     font-size: 2.5rem; /* Slightly larger heading */

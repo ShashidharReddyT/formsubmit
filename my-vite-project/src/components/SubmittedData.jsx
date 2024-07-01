@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './SubmittedData.css';
 
 const SubmittedData = () => {
@@ -30,7 +31,10 @@ const SubmittedData = () => {
 
   return (
     <>
+      <div className='headingss'>
       <h1>Submitted Data</h1>
+      <div className='back'><Link to="/">Home</Link></div>
+      </div>
       <div className="submitted-data">
         {filteredData.length === 0 ? (
           <div className="no-data">No valid submitted data available</div>
