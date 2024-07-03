@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: form-submission-backend
+    env: node
+    rootDirectory: .
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://sr8888034:yourpassword@cluster0.ujxvvnl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
