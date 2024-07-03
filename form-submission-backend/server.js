@@ -5,19 +5,16 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const uri =
+  "mongodb+srv://sr8888034:UC0IPrgeOMUQ1ZFM@cluster0.ujxvvnl.mongodb.net/yourDatabaseName?retryWrites=true&w=majority";
+
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:27017/formDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-  console.log("Connected to MongoDB");
-});
+mongoose
+  .connect(uri)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.log("connection error:", err));
 
 const formSchema = new mongoose.Schema({
   firstName: String,
